@@ -123,4 +123,3 @@ function validateEmail(){
 function removeReview() {
     document.getElementById("showInput").innerHTML = "";
 }
-function 
