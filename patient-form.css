@@ -1,0 +1,26 @@
+ /*
+ Program Name: patient-form.css
+ Author: Ashish Zach Ajish
+ Date created: 09/20/2025
+ Date last edited: 09/26/2025
+ Version: 1.4
+ Description: This file contains the CSS code for the patient registration form. 
+*/
+body {
+    background-color:  lightsalmon;  
+    text-align: center; 
+    font-weight: bold;
+    font-size: 40px
+}
+footer {
+  background-color: darksalmon;
+}
+.form {
+  width: 100%;
+  font-size: 35px;
+  font-weight: bold;
+}
+.middle-cell {
+  text-align: center;
+}
+
