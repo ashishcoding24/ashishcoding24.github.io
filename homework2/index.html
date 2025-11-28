@@ -64,7 +64,7 @@
 
         <td style="width: 33%">
           <label for="lastname">Last Name</label><br>
-          <input type="text" id="lastname" name="lastname" maxlength="30" placeholder="(Adams)" required style= "width: 500px;" pattern="[a-zA-Z']{1,30}" onblur="validateLname()" title="Letters, apostrophes, numbers and dashes only"/>
+          <input type="text" id="lastname" name="lastname" maxlength="30" placeholder="(Adams)" required style= "width: 500px" pattern="[a-zA-Z']{1,30}" onblur="validateLname()" title="Letters, apostrophes, numbers and dashes only"/>
           <span class="error" id="lname-error"></span>
         </td>
       </tr>
@@ -91,25 +91,25 @@
     <td>
       <br>
       <label  for = "address1">Address 1:</label><br>
-      <input type = "text" id = "address1" name = "address1" maxlength="30" placeholder = "(123 Main St)" required style = "width: 500px;"  onblur="validateAddress1()"/>
+      <input type = "text" id = "address1" name = "address1" maxlength="30" placeholder = "(123 Main St)" required style = "width: 500px"  onblur="validateAddress1()"/>
       <span class="error" id="address1-error"></span>   
     </td>
 
   <td style="font-size: 25px;">
     <br>
       <label  for = "address2">Address 2:</label>
-      <input type = "text" id = "address2" name = "address2" placeholder = "(Apt. 123)" style = "width: 450px;"/>
+      <input type = "text" id = "address2" name = "address2" placeholder = "(Apt. 123)" style = "width: 450px"/>
 </td>
  <td>
     <br>
       <label  for = "city">City:</label> <br>
-      <input type = "text" id = "city" name = "city" placeholder = "(Houston)" required style = "width: 500px;" maxlength = "30"/>
+      <input type = "text" id = "city" name = "city" placeholder = "(Houston)" required style = "width: 500px" maxlength = "30"/>
 </td>
 </tr>
 <td>
   <!-- State option code snippet taken from https://www.freeformatter.com/usa-state-list-html-select.html -->
       <label  for = "state">State:</label> <br>
-      <select id="state" name="state" required style= "width: 500px;">
+      <select id="state" name="state" required style= "width: 500px">
   <option value="" selected disabled>Select a State</option>
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
@@ -167,14 +167,14 @@
 </td>
 <td>
    <label  for = "zipcode">Zip Code:</label> <br>
-      <input type = "text" id = "zipcode" name = "zipcode" placeholder = "(12345)" maxlength="10" style = "width: 450px;" pattern="^\d{5}(-\d{4})?$" onblur="validateZip()"title="numbers or dashes only"/>
+      <input type = "text" id = "zipcode" name = "zipcode" placeholder = "(12345)" maxlength="10" style = "width: 450px" pattern="^\d{5}(-\d{4})?$" onblur="validateZip()"title="numbers or dashes only"/>
       <span class="error" id = "zipcode-error"></span>
 </td>
 </tr>
 <td>
 <br>
  <label  for = "age">Age:</label> <br>
-      <input type = "number" id = "age" name = "age" placeholder = "(20)" required style = "width: 500px;" maxlength="3"/>
+      <input type = "number" id = "age" name = "age" placeholder = "(20)" required style = "width: 500px" maxlength="3"/>
 </td>
 <td>
   <br>
@@ -225,28 +225,28 @@
   <td>
     <br>
   <label  for = "insurance#">Insurance #:</label> <br>
-      <input type = "text" id = "insurance#" name = "insurance#" placeholder = "(12345)" required style = "width: 500px;">
+      <input type = "text" id = "insurance#" name = "insurance#" placeholder = "(12345)" required style = "width: 500px">
   </td>
   <td>
     <br>
     <label  for = "insurance_name">Insurance Name:</label> <br>
-      <input type = "text" id = "insurance_name" name = "insurance_name" placeholder = "(Blue Cross)" required style = "width: 450px;">
+      <input type = "text" id = "insurance_name" name = "insurance_name" placeholder = "(Blue Cross)" required style = "width: 450px">
   </td>
   <td>
     <br>
     <label  for = "emergency_contact_name">Emergency Contact Name:</label> <br>
-      <input type = "text" id = "emergency_contact_name" name = "emergency_contact_name" placeholder = "(Jacob James)" required style = "width: 500px;">
+      <input type = "text" id = "emergency_contact_name" name = "emergency_contact_name" placeholder = "(Jacob James)" required style = "width: 500px">
   </td>
   <tr>
   <td>
     <br>
     <label  for = "emergency_contact_phone">Emergency Contact Phone #:</label> <br>
-      <input type = "tel" id = "emergency_contact_phone" name = "emergency_contact_phone" placeholder = "(123-456-7890)" required style = "width: 500px;">
+      <input type = "tel" id = "emergency_contact_phone" name = "emergency_contact_phone" placeholder = "(123-456-7890)" required style = "width: 500px">
   </td>
   <td>
     <br>
     <label  for = "emergency_contact_relationship">Emergency Contact Relationship:</label> <br>
-      <input type = "text" id = "emergency_contact_relationship" name = "emergency_contact_relationship" placeholder = "(Father)" required style = "width: 450px;">
+      <input type = "text" id = "emergency_contact_relationship" name = "emergency_contact_relationship" placeholder = "(Father)" required style = "width: 450px">
   </td>
 <tr>
   <td>
@@ -285,7 +285,7 @@
     <hr>
     <br>
   <label  for = "user_id">User ID:</label> <br>
-      <input type = "text" id = "user_id" name = "user_id" required minlength="5" maxlength="30" style = "width: 450px;">
+      <input type = "text" id = "user_id" name = "user_id" required minlength="5" maxlength="30" style = "width: 450px">
       </td>
       <td>
         <hr>
@@ -315,7 +315,7 @@
              onclick="reviewInput()"
 />
 <center>
-    <div id="showInput" style="margin-top:20px; padding:10px;border:1px solid #bbb;"></div>
+    <div id="showInput" style="margin-top:20px" padding:10px;border:1px solid #bbb;"></div>
 </center>
             </center>
         </td>
