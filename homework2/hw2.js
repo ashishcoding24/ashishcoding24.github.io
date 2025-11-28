@@ -5,15 +5,7 @@
  Date Updated: 10/25/2025
  Purpose: Validate data from a form. 
 */
-function dynamicrange()
-{
- var slider = document.getElementById("slider");
- var output = document.getElementById("range_slider");
- output.innerHTML = slider.value;
- slider.oninput = function()
- {
-  output.innerHTML = this.value;
- }
+
 function validateFirstName()
 {
     firstname = document.getElementById("firstname");
