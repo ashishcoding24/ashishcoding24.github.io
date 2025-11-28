@@ -69,14 +69,14 @@
         </td>
       </tr>
       <tr>
-    <td style = "width: 33%"">
+    <td style = "width: 33%">
         <label for = "dob">Date of Birth:</label><br>
         <input type="date" id = "dob" name = "dob" placeholder="(04/17/2005)" required style =  "width: 500px" onblur="validateDob()"title="Must be a date in the past, in mm/dd/yyyy format"/>
         <span class="error" id="dob-error"></span>
     </td>
     <td>
         <label for="phone#">Phone Number:</label> <br>
-        <input type="tel" id = "phone#" name = "phone#" placeholder="(123-456-7890)" required style = "width: 450px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onblur="validatePhone()" title="Must be number or dashes only. NO AREA OR COUNTRY CODE" maxlength="12"/>
+        <input type="number" id = "phone#" name = "phone#" placeholder="(123-456-7890)" required style = "width: 450px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onblur="validatePhone()" title="Must be number or dashes only. NO AREA OR COUNTRY CODE" maxlength="12"/>
         <span class="error" id="phone-error"></span>
     </td>
     <td>
@@ -95,7 +95,7 @@
       <span class="error" id="address1-error"></span>   
     </td>
 
-  <td style="font-size: 25px;">
+  <td style="font-size: 25px">
     <br>
       <label  for = "address2">Address 2:</label>
       <input type = "text" id = "address2" name = "address2" placeholder = "(Apt. 123)" style = "width: 450px"/>
