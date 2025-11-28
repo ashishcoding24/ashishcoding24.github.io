@@ -8,8 +8,12 @@
 function dynamicrange()
 {
  var slider = document.getElementById("slider");
- document.getElementById("slider").value = slider;
-}
+ var output = document.getElementById("range_slider");
+ output.innerHTML = slider.value;
+ slider.oninput = function()
+ {
+  output.innerHTML = this.value;
+ }
 function validateFirstName()
 {
     firstname = document.getElementById("firstname");
