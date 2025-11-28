@@ -256,6 +256,15 @@
   Extreme Pain
   <span id="range_slider"></span>
   </td>
+	<script>
+		var slide_bar = document.getElementById("slider");
+		var output = document.getElementById("range_slider");
+		output.innerHTML = slide_bar.value;
+		slide_bar.oninput = function()
+		{
+			output.innerHTML = this.value;
+			)
+	</script>
   <td>
   <br>
 <p>Allergies (Check all that apply):</p>
