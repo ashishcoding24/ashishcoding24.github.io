@@ -1,3 +1,4 @@
+
  <!--
  Program Name: index-1.html
  Author: Ashish Zach Ajish
@@ -9,9 +10,9 @@
    <!DOCTYPE html>
 <head>
   <title>Healing Hands Patient Registration Form</title>
-  <link rel="stylesheet" href="patient-form-hw3.css">
+  <link rel="stylesheet" href="patient-form-hw2.css">
   <link rel="icon" type="image/png" href="Healing_Hands_Clinic_Logo.png">
-  <script src = "hw3.js"> </script>
+  <script src = "hw2.js"> </script>
 </head>
 <body>
   <div id="top"> 
@@ -53,8 +54,8 @@
         <td style="font-weight:bold; width: 100%">
           <label for="firstname">First Name</label><br>
           <input type="text" id="firstname" name="firstname" maxlength="30" placeholder="(John)" required style= "width: 500px" pattern="[a-zA-Z']{1,30}" onblur="validateFirstName()" title="Letters, apostrophes and dashes only"/> 
-        </td>
         <span class="error" id="firstname-error"></span>
+        </td>
         <td style=width: "33%">
   <label for="middleinit">MI</label><br>
   <input type="text" id="middleinit" name="middleinit" maxlength="1" placeholder="Q" style="width: 450px;" pattern="[a-zA-Z']{0,1}" onblur="validateMini()" title="One letter only"/>
@@ -64,19 +65,19 @@
 
         <td style="width: 33%">
           <label for="lastname">Last Name</label><br>
-          <input type="text" id="lastname" name="lastname" maxlength="30" placeholder="(Adams)" required style= "width: 500px;" pattern="[a-zA-Z']{1,30}" onblur="validateLname()" title="Letters, apostrophes, numbers and dashes only"/>
+          <input type="text" id="lastname" name="lastname" maxlength="30" placeholder="(Adams)" required style= "width: 500px" pattern="[a-zA-Z']{1,30}" onblur="validateLname()" title="Letters, apostrophes, numbers and dashes only"/>
           <span class="error" id="lname-error"></span>
         </td>
       </tr>
       <tr>
-    <td style = "width: 33%"">
+    <td style = "width: 33%">
         <label for = "dob">Date of Birth:</label><br>
         <input type="date" id = "dob" name = "dob" placeholder="(04/17/2005)" required style =  "width: 500px" onblur="validateDob()"title="Must be a date in the past, in mm/dd/yyyy format"/>
         <span class="error" id="dob-error"></span>
     </td>
     <td>
         <label for="phone#">Phone Number:</label> <br>
-        <input type="tel" id = "phone#" name = "phone#" placeholder="(123-456-7890)" required style = "width: 450px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onblur="validatePhone()" title="Must be number or dashes only"/>
+        <input type="number" id = "phone#" name = "phone#" placeholder="(123-456-7890)" required style = "width: 450px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onblur="validatePhone()" title="Must be number or dashes only. NO AREA OR COUNTRY CODE" maxlength="12"/>
         <span class="error" id="phone-error"></span>
     </td>
     <td>
@@ -91,25 +92,25 @@
     <td>
       <br>
       <label  for = "address1">Address 1:</label><br>
-      <input type = "text" id = "address1" name = "address1" maxlength="30" placeholder = "(123 Main St)" required style = "width: 500px;"  onblur="validateAddress1()"/>
+      <input type = "text" id = "address1" name = "address1" maxlength="30" placeholder = "(123 Main St)" required style = "width: 500px"  onblur="validateAddress1()"/>
       <span class="error" id="address1-error"></span>   
     </td>
 
-  <td style="font-size: 25px;">
+  <td style="font-size: 25px">
     <br>
       <label  for = "address2">Address 2:</label>
-      <input type = "text" id = "address2" name = "address2" placeholder = "(Apt. 123)" style = "width: 450px;">
+      <input type = "text" id = "address2" name = "address2" placeholder = "(Apt. 123)" style = "width: 450px"/>
 </td>
  <td>
     <br>
       <label  for = "city">City:</label> <br>
-      <input type = "text" id = "city" name = "city" placeholder = "(Houston)" required style = "width: 500px;" maxlength = "30">
+      <input type = "text" id = "city" name = "city" placeholder = "(Houston)" required style = "width: 500px" maxlength = "30"/>
 </td>
 </tr>
 <td>
   <!-- State option code snippet taken from https://www.freeformatter.com/usa-state-list-html-select.html -->
       <label  for = "state">State:</label> <br>
-      <select id="state" name="state" required style= "width: 500px;">
+      <select id="state" name="state" required style= "width: 500px">
   <option value="" selected disabled>Select a State</option>
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
@@ -167,19 +168,19 @@
 </td>
 <td>
    <label  for = "zipcode">Zip Code:</label> <br>
-      <input type = "text" id = "zipcode" name = "zipcode" placeholder = "(12345)" maxlength="10" style = "width: 450px;" pattern="^\d{5}(-\d{4})?$" onblur="validateZip()"title="numbers or dashes only"/>
+      <input type = "text" id = "zipcode" name = "zipcode" placeholder = "(12345)" maxlength="10" style = "width: 450px" pattern="^\d{5}(-\d{4})?$" onblur="validateZip()"title="numbers or dashes only"/>
       <span class="error" id = "zipcode-error"></span>
 </td>
 </tr>
 <td>
 <br>
  <label  for = "age">Age:</label> <br>
-      <input type = "number" id = "age" name = "age" placeholder = "(20)" required style = "width: 500px;" maxlength="3">
+      <input type = "number" id = "age" name = "age" placeholder = "(20)" required style = "width: 500px" max="120"/>
 </td>
 <td>
   <br>
   <label  for = "social_security">Social Security #:</label> <br>
-      <input type = "password" id = "social_security" name = "social_security" minlength = "9" maxlength="11" = "(xxx-xx-xxxx)" required style = "width: 500px;" onblur="validateSsn()"/>
+      <input type = "password" id = "social_security" name = "social_security" minlength = "9" maxlength="11" title= "(xxx-xx-xxxx)" required style = "width: 500px;" onblur="validateSsn()"/>
       <span class="error" id="ssn-error"></span>
 </td>
 </tr>
@@ -225,28 +226,28 @@
   <td>
     <br>
   <label  for = "insurance#">Insurance #:</label> <br>
-      <input type = "text" id = "insurance#" name = "insurance#" placeholder = "(12345)" required style = "width: 500px;">
+      <input type = "text" id = "insurance#" name = "insurance#" placeholder = "(12345)" required style = "width: 500px">
   </td>
   <td>
     <br>
     <label  for = "insurance_name">Insurance Name:</label> <br>
-      <input type = "text" id = "insurance_name" name = "insurance_name" placeholder = "(Blue Cross)" required style = "width: 450px;">
+      <input type = "text" id = "insurance_name" name = "insurance_name" placeholder = "(Blue Cross)" required style = "width: 450px">
   </td>
   <td>
     <br>
     <label  for = "emergency_contact_name">Emergency Contact Name:</label> <br>
-      <input type = "text" id = "emergency_contact_name" name = "emergency_contact_name" placeholder = "(Jacob James)" required style = "width: 500px;">
+      <input type = "text" id = "emergency_contact_name" name = "emergency_contact_name" placeholder = "(Jacob James)" required style = "width: 500px">
   </td>
   <tr>
   <td>
     <br>
     <label  for = "emergency_contact_phone">Emergency Contact Phone #:</label> <br>
-      <input type = "tel" id = "emergency_contact_phone" name = "emergency_contact_phone" placeholder = "(123-456-7890)" required style = "width: 500px;">
+      <input type = "tel" id = "emergency_contact_phone" name = "emergency_contact_phone" placeholder = "(123-456-7890)" required style = "width: 500px">
   </td>
   <td>
     <br>
     <label  for = "emergency_contact_relationship">Emergency Contact Relationship:</label> <br>
-      <input type = "text" id = "emergency_contact_relationship" name = "emergency_contact_relationship" placeholder = "(Father)" required style = "width: 450px;">
+      <input type = "text" id = "emergency_contact_relationship" name = "emergency_contact_relationship" placeholder = "(Father)" required style = "width: 450px">
   </td>
 <tr>
   <td>
@@ -256,6 +257,16 @@
   Extreme Pain
   <span id="range_slider"></span>
   </td>
+	<script>
+		var slide_bar = document.getElementById("slider");
+		var output = document.getElementById("range_slider");
+		
+		output.innerHTML = slide_bar.value;
+		slide_bar.oninput = function()
+		{
+			output.innerHTML = this.value;
+		}
+	</script>
   <td>
   <br>
 <p>Allergies (Check all that apply):</p>
@@ -275,7 +286,7 @@
     <hr>
     <br>
   <label  for = "user_id">User ID:</label> <br>
-      <input type = "text" id = "user_id" name = "user_id" required minlength="5" maxlength="30" style = "width: 450px;">
+      <input type = "text" id = "user_id" name = "user_id" required minlength="5" maxlength="30" style = "width: 450px">
       </td>
       <td>
         <hr>
@@ -289,7 +300,8 @@
     <br>
 <label for = "password2">Re-enter Password:</label> <br>
       <input type = "password" id= "password2" name="password2" minlength = "8" maxlength="30" required onblur="checkPassword2()"/>
-      <span id="password2_text" name="password2_text"/></span>
+	  <br>
+      <span id="password2_text" name="password2_text" style:color="red" ></span>
       </td>
 <tr>        
         <td colspan="3">
@@ -304,7 +316,7 @@
              onclick="reviewInput()"
 />
 <center>
-    <div id="showInput" style="margin-top:20px; padding:10px;border:1px solid #bbb;"></div>
+    <div id="showInput" style="margin-top:20px" padding:10px;border:1px solid #bbb;"></div>
 </center>
             </center>
         </td>
