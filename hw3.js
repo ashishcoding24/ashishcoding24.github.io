@@ -1,8 +1,8 @@
  /* 
  Name: Ashish Zach Ajish
- File: hw2.js
- Date Created: 10/20/2025
- Date Updated: 10/25/2025
+ File: hw3.js
+ Date Created: 11/08/2025
+ Date Updated: 11/14/2025
  Purpose: Validate data from a form. 
 */
 
