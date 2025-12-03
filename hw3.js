@@ -5,13 +5,23 @@
  Date Updated: 10/25/2025
  Purpose: Validate data from a form. 
 */
+
 function validateFirstName()
 {
-    firstname = document.getElementById("firstname");
+    firstname = document.getElementById("firstname").value;
     if(firstname.length<4){
-        document.getElementById("firstname").innerHTML = "NAME IS TOO SHORT";}
+        document.getElementById("firstname-error").innerHTML = "NAME IS TOO SHORT";}
     else {
         document.getElementById("firstname").innerHTML = "Good!";
+        }
+    } 
+function validateLname()
+{
+    lastname = document.getElementById("lastname").value;
+    if(lastname.length<4){
+        document.getElementById("lname-error").innerHTML = "NAME IS TOO SHORT";}
+    else {
+        document.getElementById("lastname").innerHTML = "Good!";
         }
     } 
 
