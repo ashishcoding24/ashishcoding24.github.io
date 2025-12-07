@@ -61,7 +61,7 @@ function validateSsn()
     }
 }
 function validateZip() {
-    const zipInput = document.getElementById("zipcode").value;
+    var zipInput = document.getElementById("zipcode").value;
     let zip = zipInput.value.replace(/[^\d-]/g, "");
 
     if (!zip) {
