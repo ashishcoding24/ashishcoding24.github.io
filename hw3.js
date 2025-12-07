@@ -135,3 +135,18 @@ function validateEmail(){
 function removeReview() {
     document.getElementById("showInput").innerHTML = "";
 }
+function validateUserID()
+{
+ var userID = document.getElementById("user_id").value;
+ if ((/^[0-9]/.test(userID))
+     {document.getElementById("userId-error").innerHTML = "User ID cannot start with a number"}
+ if (userID.length < 5 || userID.length > 20) 
+     {document.getElementById("userId-error").innnerHTML = "User ID must be between 5 and 20 characters"}
+ if (!/^[A-Za-z0-9_-]+$/.test(userID))
+     {document.getElementById("userId-error").innerHTML = "User ID may contain letters, numbers, dashes (-), and underscores (_)"}
+ else {document.getElementById("userId-error").innerHTML="";
+ return true;
+      }
+}
+  
+
