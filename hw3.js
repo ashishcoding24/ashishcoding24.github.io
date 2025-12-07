@@ -65,10 +65,12 @@ function validateZip() {
     let zip = zipInput.value.replace(/[^\d-]/g, "");
 
     if (!zip) {
-        document.getElementById("zipcode-error").innerHTML = 
-        "Zip code can't be blank";
+        document.getElementById("zipcode-error").innerHTML = "Zip code can't be blank";
         return false;
     }
+    if (zip.length <= 5)
+       {document.getElementById("zipcode-error").innerHTML = "Zip code is too short";
+       return false;}
 
     if (zip.length > 5) {
         zip = zip.slice(0, 5) + "-" + zip.slice(5, 9);
