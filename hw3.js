@@ -65,7 +65,7 @@ function validateZip() {
     let zip = zipInput.value.replace(/[^\d-]/g, "");
 
     if (!zip) {
-        document.getElementById("zcode-error").innerHTML = 
+        document.getElementById("zipcode-error").innerHTML = 
         "Zip code can't be blank";
         return false;
     }
@@ -77,7 +77,7 @@ function validateZip() {
     }
 
     zipInput.value = zip;
-    document.getElementById("zcode-error").innerHTML = "";
+    document.getElementById("zipcode-error").innerHTML = "";
     return true;
 }
 function checkPassword2()
