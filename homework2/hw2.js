@@ -61,7 +61,7 @@ function validateSsn()
     }
 }
 function validateZip() {
-    const zipInput = document.getElementById("zipcode");
+    const zipInput = document.getElementById("zipcode").value;
     let zip = zipInput.value.replace(/[^\d-]/g, "");
 
     if (!zip) {
@@ -119,7 +119,7 @@ function reviewInput() {
     document.getElementById("showInput").innerHTML = formoutput;
 }
 function validateEmail(){
-   var email = document.getElementById("email")
+   var email = document.getElementById("email").value;
    var emailVal = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
    if (!emailVal.test(email)) {
         document.getElementById("email-error").innerHTML = 
