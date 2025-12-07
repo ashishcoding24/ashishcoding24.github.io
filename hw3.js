@@ -5,15 +5,6 @@
  Date Updated: 11/14/2025
  Purpose: Validate data from a form. 
 */
-
-/* 
- Name: Ashish Zach Ajish
- File: hw3.js
- Date Created: 11/08/2025
- Date Updated: 11/14/2025
- Purpose: Validate data from a form. 
-*/
-
 // ---------------- FIRST NAME ----------------
 function validateFirstName() {
     let firstname = document.getElementById("firstname").value;
