@@ -196,7 +196,7 @@
 
         <td>
           <label for="social_security">Social Security #:</label><br>
-          <input type="password" id="social_security" name="social_security" minlength="9" maxlength="11" 
+          <input type="password" id="social_security" name="social_security" minlength="9" maxlength="11" pattern="\d{3}-\d{2}-\d{4}"
             style="width:500px;" required onblur="validateSsn()">
           <span class="error" id="ssn-error"></span>
         </td>
