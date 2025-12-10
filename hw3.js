@@ -9,7 +9,7 @@
 function validateFirstName() {
     let firstname = document.getElementById("firstname").value;
 
-    if (firstname.length < 2) {
+    if (firstname.length < 4) {
         document.getElementById("firstname-error").innerHTML = "Name is too short";
     } else {
         document.getElementById("firstname-error").innerHTML = "";
@@ -20,7 +20,7 @@ function validateFirstName() {
 function validateLname() {
     let lastname = document.getElementById("lastname").value;
 
-    if (lastname.length < 2) {
+    if (lastname.length < 4) {
         document.getElementById("lname-error").innerHTML = "Name is too short";
     } else {
         document.getElementById("lname-error").innerHTML = "";
