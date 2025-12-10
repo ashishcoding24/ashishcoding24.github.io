@@ -177,15 +177,12 @@
 
 
         </td>
-<select id="stateSelect">
-  <option value="">-- Select State --</option>
-</select>
 
 <script>
   fetch("https://gist.githubusercontent.com/mshafrir/2646763/raw/states_titlecase.json")
     .then(res => res.json())
     .then(states => {
-      const select = document.getElementById("stateSelect");
+      const select = document.getElementById("state");
 
       states.forEach(state => {
         const opt = document.createElement("option");
