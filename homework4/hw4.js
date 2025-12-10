@@ -64,7 +64,22 @@ function validateSsn() {
     document.getElementById("ssn-error").innerHTML = "";
     return true;
 }
+function loadStates() {
+  fetch("https://gist.githubusercontent.com/mshafrir/2646763/raw/states_titlecase.json")
+    .then(res => res.json())
+    .then(states => {
+      const select = document.getElementById("stateSelect");
 
+      states.forEach(state => {
+        const opt = document.createElement("option");
+        opt.value = state.abbreviation;
+        opt.textContent = state.name;
+        select.appendChild(opt);
+      });
+    })
+    .catch(err => console.error("Error loading states:", err));
+}
+window.addEventListener("DOMContentLoaded", loadStates);
 
 function validateZip() {
     let zipInput = document.getElementById("zipcode");
