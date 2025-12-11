@@ -5,6 +5,47 @@
  Date Updated: 11/14/2025
  Purpose: Validate data from a form. 
 */
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("welcomeBanner");
+  const firstName = getCookie("firstName");
+
+  if (firstName) {
+    banner.innerHTML = `
+      <h2>Welcome back, ${firstName}!</h2>
+      <label>
+        <input type="checkbox" id="newUserCheck">
+        Not ${firstName}? Click here to start as NEW USER
+      </label>
+    `;
+
+    document.addEventListener("change", () => {
+      const ck = document.getElementById("newUserCheck");
+      if (ck && ck.checked) {
+        deleteCookie("firstName");
+        document.getElementById("patient_form").reset();
+        banner.innerHTML = "<h2>Welcome New User</h2>";
+      }
+    });
+
+  } else {
+    banner.innerHTML = "<h2>Welcome New User</h2>";
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("submitBtn").addEventListener("click", () => {
+    const remember = document.getElementById("rememberMe").checked;
+    const firstName = document.getElementById("firstname").value;
+
+    if (remember) {
+      setCookie("firstName", firstName, 48); // Save for 48 hours
+    } else {
+      deleteCookie("firstName");
+    }
+
+    // Continue to thank-you page or form submission
+    window.location.href = "thank-you.html";
+  });
+});
 
 function validateFirstName() {
     let firstname = document.getElementById("firstname").value;
@@ -143,7 +184,24 @@ function validateUserID() {
     document.getElementById("userId-error").innerHTML = "";
     return true;
 }
+function setCookie(name, value, hours)
+{
+ const expires = new Date(Date.now() + hours * 3600000).toUTCString();
+ document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+}
 
+function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (const cookie of cookies) {
+    const [key, val] = cookie.split("=");
+    if (key === name) return val;
+  }
+  return null;
+}
+
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+}
 
 function reviewInput() {
     let form = document.getElementById("patient_form");
