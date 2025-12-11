@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.innerHTML = `
       <h2>Welcome back, ${firstName}!</h2>
       <label>
-        <input type="checkbox" id="newUserCheck">
+        <input type="checkbox" id="check">
         Not ${firstName}? Click here to start as NEW USER
       </label>
     `;
 
     document.addEventListener("change", () => {
-      const ck = document.getElementById("newUserCheck");
-      if (ck && ck.checked) {
+      const check = document.getElementById("check");
+      if (check && check.checked) {
         deleteCookie("firstName");
         document.getElementById("patient_form").reset();
         banner.innerHTML = "<h2>Welcome New User</h2>";
@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("submitBtn").addEventListener("click", () => {
+  document.getElementById("submitBtn").addEventListener("click",
     const remember = document.getElementById("rememberMe").checked;
     const firstName = document.getElementById("firstname").value;
 
     if (remember) {
-      setCookie("firstName", firstName, 48); // Save for 48 hours
+      setCookie("firstName", firstName, 48);
     } else {
       deleteCookie("firstName");
     }
