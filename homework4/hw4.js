@@ -1,8 +1,8 @@
  /* 
  Name: Ashish Zach Ajish
- File: hw3.js
- Date Created: 11/08/2025
- Date Updated: 11/14/2025
+ File: hw4.js
+ Date Created: 12/03/2025
+ Date Updated: 12/06/2025
  Purpose: Validate data from a form. 
 */
 document.addEventListener("DOMContentLoaded", () => {
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       deleteCookie("firstName");
     }
 
-    // Continue to thank-you page or form submission
     window.location.href = "thank-you.html";
   });
 });
