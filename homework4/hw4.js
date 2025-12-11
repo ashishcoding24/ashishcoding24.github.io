@@ -13,19 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.innerHTML = `
       <h2>Welcome back, ${firstName}!</h2>
       <label>
-        <input type="checkbox" id="check">
+        <input type="checkbox" id="newUserCheck">
         Not ${firstName}? Click here to start as NEW USER
       </label>
     `;
 
     document.addEventListener("change", () => {
-      const check = document.getElementById("check");
-      if (check && check.checked) {
+      const ck = document.getElementById("newUserCheck");
+      if (ck && ck.checked) {
         deleteCookie("firstName");
         document.getElementById("patient_form").reset();
         banner.innerHTML = "<h2>Welcome New User</h2>";
       }
     });
+
+  } else {
+    banner.innerHTML = "<h2>Welcome New User</h2>";
+  }
+});
+
 
   } else {
     banner.innerHTML = "<h2>Welcome New User</h2>";
