@@ -14,12 +14,6 @@
   background: #2596be;
   color: #f1f1f1;
 }
-body {
-    background-color:  lightsalmon;  
-    text-align: center; 
-    font-weight: bold;
-    font-size: 40px
-}
 .footer {
    position: sticky;
   top: 0;
@@ -27,6 +21,12 @@ body {
   background: #555;
   color: #f1f1f1;
   background-color: darksalmon;
+}
+body {
+    background-color:  lightsalmon;  
+    text-align: center; 
+    font-weight: bold;
+    font-size: 40px
 }
 .form {
   width: 100%;
