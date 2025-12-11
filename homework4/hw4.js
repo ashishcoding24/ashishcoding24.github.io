@@ -32,26 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-  } else {
-    banner.innerHTML = "<h2>Welcome New User</h2>";
-  }
-});
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("submitBtn").addEventListener("click",
-    const remember = document.getElementById("rememberMe").checked;
-    const firstName = document.getElementById("firstname").value;
-
-    if (remember) {
-      setCookie("firstName", firstName, 48);
-    } else {
-      deleteCookie("firstName");
-    }
-
-    window.location.href = "thank-you.html";
-  });
-});
-
 function validateFirstName() {
     let firstname = document.getElementById("firstname").value;
 
